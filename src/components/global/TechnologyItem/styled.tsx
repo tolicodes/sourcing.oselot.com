@@ -18,8 +18,8 @@ export const IconContainer = styled.div<IconContainerProps>`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
   background-color: #8A4535;
   border: 5px solid #EEA669;
   border-radius: 100%;
