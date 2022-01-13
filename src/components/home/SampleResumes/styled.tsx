@@ -15,13 +15,13 @@ export const StyledModal = styled(ReactModal)<StyledModalProps>`
   inset: 20px;
   background: transparent;
   overflow: auto;
-  left: 50%;
-  transform: translate(-50%, 0);
   outline: none;
   display: flex;
   column-gap: 16px;
-  
+ 
   @media (min-width: 576px) {
+    left: 50%;
+    transform: translate(-50%, 0);
     width: 540px;
   }
 
