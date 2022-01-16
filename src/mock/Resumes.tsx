@@ -3,7 +3,7 @@ export interface IResume {
   preview: string;
 }
 
-export const Resumes: IResume[] = [
+export const resumes: IResume[] = [
   {
     id: 1,
     preview: '/assets/pdf/Resume1.pdf'

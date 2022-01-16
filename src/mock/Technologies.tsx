@@ -6,7 +6,7 @@ export interface ITechnology {
   label: string;
 }
 
-export const Technologies: ITechnology[] = [
+export const technologies: ITechnology[] = [
   {
     id: 1,
     icon: <img src="/assets/icons/react.svg" alt="React"/>,

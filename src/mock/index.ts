@@ -1,8 +1,8 @@
-import { Technologies, ITechnology } from './Technologies';
-import { Resumes, IResume } from './Resumes'
+import { technologies, ITechnology } from './Technologies';
+import { resumes, IResume } from './Resumes'
 
 export {
-  Technologies, Resumes
+  technologies, resumes
 };
 export type { ITechnology, IResume };
 

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { TechnologyItem, ResumePreview, Container } from '../../global';
 
 import {
-  Technologies as TechnologiesData, ITechnology,
-  Resumes as ResumesData, IResume
+  technologies as technologiesData, ITechnology,
+  resumes as resumesData, IResume
 } from '../../../mock';
 import {
   ArrowDown, modalOverlayStyle, ModalResumeContent,
@@ -32,7 +32,7 @@ export function SampleResumes({...props}: SampleResumeProps) {
 
   const onNext = () => {
     switch (activeResumeIndex){
-      case(ResumesData.length-1):
+      case(resumesData.length-1):
         setActiveResumeIndex(0);
         break;
       default:
@@ -43,7 +43,7 @@ export function SampleResumes({...props}: SampleResumeProps) {
   const onPrevious = () => {
     switch (activeResumeIndex){
       case(0):
-        setActiveResumeIndex(ResumesData.length-1);
+        setActiveResumeIndex(resumesData.length-1);
         break;
       default:
         setActiveResumeIndex(activeResumeIndex-1)
@@ -56,13 +56,13 @@ export function SampleResumes({...props}: SampleResumeProps) {
       <StyledModal isOpen={modalIsOpen}
                    onRequestClose={closeModal} style={modalOverlayStyle}>
         <ArrowDown src="/assets/icons/left.svg" width="28px" alt="down" onClick={onPrevious}/>
-        <ModalResumeContent src={`${ResumesData[activeResumeIndex].preview}#zoom=FitW&toolbar=0&navpanes=0&scrollbar=0`}/>
+        <ModalResumeContent src={`${resumesData[activeResumeIndex].preview}#zoom=FitW&toolbar=0&navpanes=0&scrollbar=0`}/>
         <ArrowDown src="/assets/icons/right.svg" width="28px" alt="down" onClick={onNext}/>
       </StyledModal>
       <Container>
         <Title>SAMPLE RESUMES</Title>
         <Technologies>
-          {TechnologiesData.map((item: ITechnology) => (
+          {technologiesData.map((item: ITechnology) => (
             <TechnologyItem
               key={item.id}
               icon={item.icon}
@@ -71,7 +71,7 @@ export function SampleResumes({...props}: SampleResumeProps) {
           ))}
         </Technologies>
         <Resumes>
-          {ResumesData.map((item: IResume, index: number) => (
+          {resumesData.map((item: IResume, index: number) => (
             <ResumePreview
               onResumeClick={()=>openModal(index)}
               key={item.id}
