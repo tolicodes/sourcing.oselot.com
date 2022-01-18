@@ -10,6 +10,7 @@ export const Container = styled.div<ContainerProps>`
     margin-left: auto;
     display: flex;
     flex-direction: column;
+	z-index: 2;
 
   @media (min-width: 576px) {
       width: 540px;
