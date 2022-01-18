@@ -7,6 +7,7 @@ interface StyledModalProps {
 export const modalOverlayStyle = {
   overlay: {
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    zIndex: 10,
   }
 };
 
